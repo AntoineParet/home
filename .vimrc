@@ -150,11 +150,15 @@ call plug#end()
     " sudo with !!
     map w!! %!sudo tee % > /dev/null
 
+    " auto cd
+    autocmd BufEnter * lcd %:p:h
+
     "tag list
     let g:Tlist_Use_Right_Window=1
 
     "nerd tree
     let NERDTreeIgnore=['\.pyrc$', '\.svn$', '\.git$']
+    let NERDTreeQuitOnOpen=1
 	"autocmd BufEnter * NERDTreeMirror
 
     "Phase of the Moon calculation
