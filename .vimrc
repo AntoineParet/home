@@ -1,13 +1,16 @@
-" Julien (jvoisin) Voisin <julien.voisin@dustri.org>
+" Skia < lordbanana25 AT mailoo DOT org >
+" Released under the Beer License - 2014:2015
+"
+" Based on an initial vimrc by Julien (jvoisin) Voisin <julien.voisin@dustri.org>
 " Released under the Beer License - 2010:2012
 
 "GENERAL
     set nocompatible            " vim, and not vi
     set history=128             " keep 128 lines of history
     set showcmd                 " show incomplete commands
-    colorscheme default			" colorsheme : wombat <3
+    colorscheme default			" colorsheme : default for now
     set nomodeline              " modeline are for pussies
-    set textwidth=80           " max number of characters on a single line
+    set textwidth=120           " max number of characters on a single line
     set background=dark
     filetype plugin on
 
@@ -33,13 +36,13 @@
     syntax on                   " activate the syntax
     set ruler                   " always show the current position
     set so=7                    " 9 lines margin to the cursor when moving
-    "set t_Co=256                " 256 colors
+    set t_Co=256                " 256 colors
     set splitbelow              " split below current window
     set ttyfast                 " smooth !
 
     "change color of char that are beyond the 79th column
-    "highlight rightMargin ctermfg=grey
-    "match rightMargin /.\%>79v/
+    highlight rightMargin ctermfg=grey
+    match rightMargin /.\%>119v/
 
 
 " MOUSE
@@ -65,7 +68,7 @@
     set wrap                    " wrap
 
 "SPELLCHECK
-    setlocal spell spelllang=fr
+    "setlocal spell spelllang=fr
     "setlocal spell spelllang=en_gb
     set nospell
 
@@ -105,7 +108,7 @@
 
 "BINDINGS
     " For all text files set 'textwidth' to 79 characters.
-    autocmd FileType text setlocal textwidth=79
+    autocmd FileType text setlocal textwidth=120
 
     " nerdtree
     map <silent> <F6> :tabprevious<CR>
@@ -137,7 +140,7 @@
 " MISC
     set visualbell            " no beep !
     " no trailing spaces !
-	"autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+	autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
     " sudo with !!
     map w!! %!sudo tee % > /dev/null
 
@@ -168,48 +171,6 @@
 
 " specific stuffs
 " no tabexpand for makefiles
-" autocmd FileType make setlocal noexpandtab
-
-
-" Diff from current file
-command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
-
-" Status Line
-
-    if has('statusline')
-        set laststatus=2
-
-        " Broken down into easily includeable segments
-        set statusline=%<%f\                     " Filename
-        set statusline+=%w%h%m%r                 " Options
-        set statusline+=%{fugitive#statusline()} " Git Hotness
-        set statusline+=\ [%{&ff}/%Y]            " Filetype
-        set statusline+=\ [%{getcwd()}]          " Current dir
-        set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-    endif
-
-
-    " vim-airline {
-        " Set configuration options for the statusline plugin vim-airline.
-        " Use the powerline theme and optionally enable powerline symbols.
-        " To use the symbols , , , , , , and .in the statusline
-        " segments add the following to your .vimrc.before.local file:
-        "   let g:airline_powerline_fonts=1
-        " If the previous symbols do not render for you then install a
-        " powerline enabled font.
-
-        " See `:echo g:airline_theme_map` for some more choices
-        " Default in terminal vim is 'dark'
-"        if isdirectory(expand("~/.vim/vim-airline/"))
-"            if !exists('g:airline_theme')
-"                let g:airline_theme = 'solarized'
-"            endif
-"            if !exists('g:airline_powerline_fonts')
-"                " Use the default set of separators with a few customizations
-"                let g:airline_left_sep='›'  " Slightly fancier than '>'
-"                let g:airline_right_sep='‹' " Slightly fancier than '<'
-"            endif
-"        endif
-    " }
+    autocmd FileType make setlocal noexpandtab
 
 
