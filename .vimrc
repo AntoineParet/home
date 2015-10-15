@@ -4,16 +4,21 @@
 " Based on an initial vimrc by Julien (jvoisin) Voisin <julien.voisin@dustri.org>
 " Released under the Beer License - 2010:2012
 
+call plug#begin('~/.vim/plugged')
+Plug 'wombat256.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+call plug#end()
+
 "GENERAL
     set nocompatible            " vim, and not vi
     set history=128             " keep 128 lines of history
     set showcmd                 " show incomplete commands
-    colorscheme default			" colorsheme : default for now
+    colorscheme wombat256mod	" colorsheme : wombat256
+    set background=dark
     set nomodeline              " modeline are for pussies
     set textwidth=120           " max number of characters on a single line
-    set background=dark
     filetype plugin on
-
 
 "ENCODING
     set encoding=utf-8
@@ -111,6 +116,7 @@
     autocmd FileType text setlocal textwidth=120
 
     " nerdtree
+    map <silent> <C-e> :NERDTreeToggle<CR>
     map <silent> <F6> :tabprevious<CR>
     map <silent> <F7> :tabnext<CR>
     map <silent> <F8> :set spell!<CR>
