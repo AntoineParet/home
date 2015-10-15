@@ -32,8 +32,8 @@ function hook_moc()
         if moc_state == "PLAY" or moc_state == "PAUSE" then
             moc_artist = string.gsub(string.match(moc_info, "Artist: %C*"), "Artist: ","")
             moc_title = string.gsub(string.match(moc_info, "SongTitle: %C*"), "SongTitle: ","")
-            moc_curtime = string.gsub(string.match(moc_info, "CurrentTime: %d*:%d*"), "CurrentTime: ","")
-            moc_totaltime = string.gsub(string.match(moc_info, "TotalTime: %d*:%d*"), "TotalTime: ","")
+            moc_curtime = string.gsub(string.match(moc_info, "CurrentTime: %C*"), "CurrentTime: ","")
+            moc_totaltime = string.gsub(string.match(moc_info, "TotalTime: %C*"), "TotalTime: ","")
             if moc_artist == "" then
                 moc_artist = "unknown artist"
             end

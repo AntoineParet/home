@@ -257,6 +257,7 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86ScreenSaver", function () awful.util.spawn("lock") end),
     awful.key({ modkey, "Mod1"    }, "w", function () awful.util.spawn("x-www-browser") end),
     awful.key({ modkey, "Mod1"    }, "f", function () awful.util.spawn("thunar") end),
+    awful.key({         "Mod1"    }, "F2", function () awful.util.spawn("lock") end),
     awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("mocp -G") end),
     awful.key({ }, "Print", function () awful.util.spawn("xfce4-screenshooter") end),
 
