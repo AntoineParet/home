@@ -120,3 +120,19 @@ compdef _service srv
 
 export SDL_NOMOUSE=1
 
+# Set title to GNU screen/byobu tab
+settitle() {
+    if [ "$TERM" = "screen" ];
+    then
+        printf "\033k$1\033\\";
+    fi
+}
+
+# Set title when sshing within a tab to some host
+ssh() {
+    host=$(echo "$*" | sed "s/^.\+@\([^ ]\+\)[ \n]*.*/\1/")
+    settitle $host
+    command ssh "$@"
+    settitle $(hostname)
+}
+
