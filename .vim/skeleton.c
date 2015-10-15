@@ -1,8 +1,7 @@
 /*
+ * Skia < lordbanana25 AT mailoo DOT org >
  *
- *
- *                      JACQUET Florent -- Skia
- *                      florent.jacquet@utbm.fr
+ * Beerware licensed software - 2015
  */
 
 #include <stdio.h>
