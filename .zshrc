@@ -68,6 +68,7 @@ alias latexclean="rm *.aux; rm *.log; rm *.out; rm *.toc; rm *.snm; rm *.nav"
 alias poogle="ping google.com"
 alias moc="mocp -T transparent-background"
 alias MEMODUALSCREEN="echo 'xrandr --output VGA1 --mode 1440x900 --right-of LVDS1'"
+alias starwars="telnet towel.blinkenlights.nl"
 
 # Shortcut aliases
 alias RADARE="cd /home/skia/Prog/radare2"
