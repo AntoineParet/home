@@ -9,10 +9,11 @@ zstyle ':completion:*' cache-path ~/.zsh_cache
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
                            /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
+fpath=(~/.zsh/functions $fpath)
 
 autoload -U promptinit
 promptinit
-prompt adam2
+prompt skia
 
 autoload -U bashcompinit
 bashcompinit
