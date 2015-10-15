@@ -41,6 +41,7 @@ bindkey "^[[6~" down-line-or-history
 alias ll='ls --color=auto -alh'
 alias ls='ls --color=auto -h'
 alias grep='grep --color=auto'
+alias sudo='sudo -E'
 alias update='sudo aptitude update'
 alias upgrade='sudo aptitude upgrade'
 alias full-update='update && upgrade'
@@ -67,7 +68,8 @@ alias report="pandoc -V geometry:margin=1in -V fontsize:11pt"
 alias latexclean="rm *.aux; rm *.log; rm *.out; rm *.toc; rm *.snm; rm *.nav"
 alias poogle="ping google.com"
 alias moc="mocp -T transparent-background"
-alias MEMODUALSCREEN="echo 'xrandr --output VGA1 --mode 1440x900 --right-of LVDS1'"
+alias MEMODUALSCREEN="echo 'xrandr --output VGA1 --auto --right-of LVDS1'"
+alias DUALSCREEN="xrandr --output VGA1 --auto --right-of LVDS1"
 alias starwars="telnet towel.blinkenlights.nl"
 
 # Shortcut aliases
@@ -80,7 +82,7 @@ alias Dagobah="ssh skia@10.20.0.102"
 alias DagobahLAN="Dagobah"
 alias DagobahWAN="ssh skia@dagobah.libskia.so"
 alias Alderaan="ssh skia@10.20.0.101"
-alias Libskia.so="ssh skia@libskia.so"
+alias Libskia.so="ssh skia@pike.tf -p 443 -D 1080"
 
 # ssh-agent
 SSH_ENV="$HOME/.ssh/environment"

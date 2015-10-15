@@ -14,7 +14,7 @@ require("debian.menu")
 -- require("precious.sound")
 require("precious.cpu")
 require("precious.ram")
--- require("precious.mocp")
+require("precious.mocp")
 require("precious.battery")
 
 -- {{{ Error handling
@@ -184,8 +184,8 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         mytextclock,
         mysystray,
-        -- tb_moc,
-        -- tb_volume,
+        tb_moc,
+        tb_volume,
         batinfo,
         meminfo,
         cputemp,
@@ -399,7 +399,6 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- }}}
 --
 -- Autostart
-os.execute("wicd-gtk &")
-os.execute("(sleep 3s && terminator -x ssh libskia.so) &")
+os.execute("(sleep 3s && terminator -x ssh skia@pike.tf -p 443 -D 1080) &")
 os.execute("(sleep 3s && parcellite) &")
 
