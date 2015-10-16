@@ -84,7 +84,7 @@ prompt_skia_precmd() {
   git status >/dev/null 2>/dev/null
   if [ $? = 0 ]; then
       git_branch=$(git branch 2>/dev/null | grep -e '^*' | sed -E 's/^\* (.+)$/\1/')
-      git_shortstat=$(git diff --shortstat | sed "s/^ \(.\+\) files\? changed, \(.\+\) insertions\?(+), \(.\+\) deletions\?(-)/%F{black}: \1f %F{green}\2+ %F{red}\3-/")
+      git_shortstat=$(git diff --shortstat | sed "s/^ \(.\+\) files\? changed\(, \(.\+\) insertions\?(+)\)\?\(, \(.\+\) deletions\?(-)\)\?/%F{black}: \1f %F{green}\3+ %F{red}\5-/")
       git_color=$((git status --short --porcelain | grep "^??" > /dev/null && echo "%F{red}") ||
         (git status --short --porcelain | grep "^ \?M" > /dev/null && echo "%F{yellow}") || echo "%F{green}")
       prompt_git="$prompt_l_paren$git_color$git_branch$git_shortstat$prompt_r_paren"
