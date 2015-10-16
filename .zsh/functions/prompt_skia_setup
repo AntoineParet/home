@@ -2,6 +2,9 @@
 
 prompt_skia_help () {
   cat <<'EOF'
+Based on the adam2 prompt
+The skia prompt just adds a small git info support
+
 This prompt is color-scheme-able.  You can invoke it thus:
 
   prompt skia [ 8bit ] [<color1> [<color2> [<color3>] [<color4>]]
@@ -14,7 +17,7 @@ If you have either UTF-8 or the `nexus' or `vga' console fonts or similar,
 you can specify the `8bit' option to use 8-bit replacements for the
 7-bit characters.
 
-And you probably thought adam1 was overkill ...
+And you probably thought adam2 was overkill ...
 EOF
 }
 
@@ -58,10 +61,11 @@ prompt_skia_setup () {
   prompt_l_paren="%B%F{black}("
   prompt_r_paren="%B%F{black})"
 
+
   prompt_user_host="%b%F{$prompt_skia_color3}%n%B%F{$prompt_skia_color3}@%b%F{$prompt_skia_color3}%m"
 
   prompt_line_1a="$prompt_gfx_tbox$prompt_l_paren%B%F{$prompt_skia_color2}%~$prompt_r_paren%b%F{$prompt_skia_color1}"
-  prompt_line_1b="$prompt_l_paren$prompt_user_host$prompt_r_paren%b%F{$prompt_skia_color1}${prompt_gfx_hyphen}"
+  prompt_line_1b_first="${prompt_gfx_hyphen}$prompt_l_paren$prompt_user_host$prompt_r_paren%b%F{$prompt_skia_color1}${prompt_gfx_hyphen}"
 
   prompt_line_2="$prompt_gfx_bbox${prompt_gfx_hyphen}%B%F{white}"
 
@@ -75,6 +79,19 @@ prompt_skia_setup () {
 prompt_skia_precmd() {
   setopt noxtrace localoptions extendedglob
   local prompt_line_1
+
+# Git handling
+  git status >/dev/null 2>/dev/null
+  if [ $? = 0 ]; then
+      git_branch=$(git branch 2>/dev/null | grep -e '^*' | sed -E 's/^\* (.+)$/\1/')
+      git_shortstat=$(git diff --shortstat | sed "s/^ \(.\+\) files\? changed, \(.\+\) insertions\?(+), \(.\+\) deletions\?(-)/%F{black}: \1f %F{green}\2+ %F{red}\3-/")
+      git_color=$((git status --short --porcelain | grep "^??" > /dev/null && echo "%F{red}") ||
+        (git status --short --porcelain | grep "^ \?M" > /dev/null && echo "%F{yellow}") || echo "%F{green}")
+      prompt_git="$prompt_l_paren$git_color$git_branch$git_shortstat$prompt_r_paren"
+  else
+      prompt_git=""
+  fi
+  prompt_line_1b="$prompt_git$prompt_line_1b_first"
 
   prompt_skia_choose_prompt
 
