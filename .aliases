@@ -1,0 +1,49 @@
+
+# Aliases
+alias ll='ls --color=auto -alh'
+alias ls='ls --color=auto -h'
+alias grep='grep --color=auto'
+alias sudo='sudo -E'
+alias update='sudo aptitude update'
+alias upgrade='sudo aptitude upgrade'
+alias full-update='update && upgrade'
+alias i="sudo aptitude install"
+alias purge="sudo aptitude purge"
+alias s='aptitude search'
+alias less='less -r'
+alias unzip-all="7z x -y '*.zip'"
+alias zshrc="vim ~/.zshrc && source ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+
+# System aliases
+alias dodo="sudo shutdown now -h"
+alias goodnight="sudo shutdown -h +90"
+alias reboot="sudo reboot"
+alias byebye="sudo lock && sudo pm-suspend"
+alias SX="startx &; disown startx; exit"
+alias VPN="sudo service openvpn"
+
+# Misc
+alias commit='curl -s http://whatthecommit.com/index.txt'
+alias compil="gcc -Wall -Werror -ansi -g"
+alias report="pandoc -V geometry:margin=1in -V fontsize:11pt"
+alias latexclean="rm *.aux; rm *.log; rm *.out; rm *.toc; rm *.snm; rm *.nav"
+alias poogle="ping google.com"
+alias moc="mocp -T transparent-background"
+alias MEMODUALSCREEN="echo 'xrandr --output VGA1 --auto --right-of LVDS1'"
+alias DUALSCREEN="xrandr --output VGA1 --auto --right-of LVDS1"
+alias starwars="telnet towel.blinkenlights.nl"
+
+# Shortcut aliases
+alias RADARE="cd /home/skia/Prog/radare2"
+alias GI02="cd /home/skia/Documents/UTBM/GI02"
+
+# SSH aliases
+alias Tatooine="ssh skia@skia.mooo.com"
+alias Dagobah="ssh skia@10.20.0.102"
+alias DagobahLAN="Dagobah"
+alias DagobahWAN="ssh skia@dagobah.libskia.so"
+alias Alderaan="ssh skia@10.20.0.101"
+alias Libskia.so="ssh skia@pike.tf -p 443 -D 1080"
+
+
