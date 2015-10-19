@@ -8,9 +8,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'wombat256.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-" Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neocomplete.vim'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
+Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 "GENERAL
@@ -109,7 +110,7 @@ call plug#end()
     autocmd BufnewFile *.c      0r ~/.vim/skeleton.c|5
     autocmd BufnewFile *.tex    0r ~/.vim/skeleton.tex|47
 
-" Prolog hack
+" Filetype hack
 	autocmd BufRead,BufNewFile *.pl		set filetype=prolog
 	autocmd BufRead,BufNewFile *.md		set filetype=markdown
 	autocmd Filetype pl set syntax=prolog
@@ -186,15 +187,17 @@ call plug#end()
 " no tabexpand for makefiles
     autocmd FileType make setlocal noexpandtab
 
+
+
 "" Neocomplete
 "" Disable AutoComplPop.
 "let g:acp_enableAtStartup = 0
 "" Use neocomplete.
-"let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 1
 "" Use smartcase.
-"let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#enable_smart_case = 1
 "" Set minimum syntax keyword length.
-"let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 "let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 "
 "" Define dictionary.
@@ -232,18 +235,11 @@ call plug#end()
 "" AutoComplPop like behavior.
 ""let g:neocomplete#enable_auto_select = 1
 "
-"" Shell like behavior(not recommended).
-""set completeopt+=longest
-""let g:neocomplete#enable_auto_select = 1
-""let g:neocomplete#disable_auto_complete = 1
-""inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-"
 "" Enable omni completion.
-"autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-"autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-"autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "
 "" Enable heavy omni completion.
 "if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -258,3 +254,6 @@ call plug#end()
 "let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "
 "
+
+"Load language specific config file
+    autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vimrc.python
