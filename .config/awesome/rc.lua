@@ -11,7 +11,7 @@ require("naughty")
 require("debian.menu")
 
 -- Load plugin
--- require("precious.sound")
+require("precious.sound")
 require("precious.cpu")
 require("precious.ram")
 require("precious.mocp")

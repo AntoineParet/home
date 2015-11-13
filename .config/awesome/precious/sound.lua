@@ -25,7 +25,7 @@ function volume (mode, widget)
 		io.popen("amixer -q -c " .. cardid .. " sset " .. channel .. " 1%-"):read("*all")
 		volume("update", widget)
 	else
-		io.popen("amixer -c " .. cardid .. " sset " .. channel .. " toggle"):read("*all")
+        io.popen("pactl set-sink-mute " .. cardid .. " toggle"):read("*all")
 		volume("update", widget)
 	end
 end
