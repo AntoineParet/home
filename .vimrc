@@ -161,7 +161,7 @@ call plug#end()
     let g:Tlist_Use_Right_Window=1
 
     "nerd tree
-    let NERDTreeIgnore=['\.pyrc$', '\.svn$', '\.git$']
+    let NERDTreeIgnore=['\.pyc$', '\.pyrc$', '\.svn$', '\.git$']
     let NERDTreeQuitOnOpen=1
 	"autocmd BufEnter * NERDTreeMirror
 
