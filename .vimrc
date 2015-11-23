@@ -64,17 +64,26 @@ call plug#end()
     set foldmethod=manual       " folding on indentation
     set foldlevel=99            " maxindent = inf !
 
+"SYNTAX/LAYOUT
+    filetype plugin indent on   " automatic recognition of filetype
+    set wrap                    " wrap
 
 "AUTOCOMPLETION
     set wildmode=list:longest,full
     set wildignore+=*.pyc,*.o    " ignored on autocomplete
     set completeopt=longest,menuone,preview    " cool completion view
     set complete=.,w,b,u,U,t,i,d    " mega tab completion
-    set omnifunc=synthaxcomplete#Complete
+    set omnifunc=syntaxcomplete#Complete
+" TODO complete with more filetypes
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 
-"SYNTAX/LAYOUT
-    filetype plugin indent on   " automatic recognition of filetype
-    set wrap                    " wrap
+
+    let g:SuperTabDefaultCompletionType = 'context'
+    autocmd FileType *
+          \ if &omnifunc != '' |
+          \     call SuperTabChain(&omnifunc, '<c-p>') |
+          \ endif
 
 "SPELLCHECK
     "setlocal spell spelllang=fr
@@ -256,4 +265,4 @@ call plug#end()
 "
 
 "Load language specific config file
-    autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vimrc.python
+"autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vimrc.python
