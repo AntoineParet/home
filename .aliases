@@ -46,4 +46,6 @@ alias DagobahWAN="ssh skia@dagobah.libskia.so"
 alias Alderaan="ssh skia@10.20.0.101"
 alias Libskia.so="ssh skia@pike.tf -p 443 -D 1080"
 
+source ~/.aliases.local
+
 
