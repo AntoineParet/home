@@ -11,7 +11,7 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'Shougo/neocomplete.vim'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'davidhalter/jedi-vim'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 "GENERAL
