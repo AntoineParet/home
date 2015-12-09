@@ -90,4 +90,8 @@ ssh() {
     settitle $(hostname)
 }
 
+AddYear() {
+    mv $1 "$2 - $1"
+}
+
 source ~/.aliases
