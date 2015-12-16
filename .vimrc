@@ -159,7 +159,19 @@ call plug#end()
 " MISC
     set visualbell            " no beep !
     " no trailing spaces !
-	autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+    fun! StripTrailingWhitespace()
+        if exists('b:noStripWhitespace')
+            return
+        endif
+        %s/\s\+$//e
+    endfun
+    autocmd BufWritePre * call StripTrailingWhitespace()
+    " Don't strip on these filetypes
+    autocmd FileType markdown let b:noStripWhitespace=1
+    " show unwanted spaces
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    match ExtraWhitespace /\s\+$/
+    autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
     " sudo with !!
     map w!! %!sudo tee % > /dev/null
 
