@@ -12,6 +12,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'vim-scripts/nginx.vim'
 call plug#end()
 
 "GENERAL
@@ -123,6 +124,7 @@ call plug#end()
 	autocmd BufRead,BufNewFile *.pl		set filetype=prolog
 	autocmd BufRead,BufNewFile *.md		set filetype=markdown
 	autocmd Filetype pl set syntax=prolog
+    au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
 
 "BINDINGS
     " For all text files set 'textwidth' to 79 characters.
