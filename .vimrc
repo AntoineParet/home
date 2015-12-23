@@ -100,6 +100,8 @@ call plug#end()
 "MAPPING
     " ROT13, olol !
     map <F12> ggVGg?
+    map <C-y> "+y
+    map <C-p> "+p
     set backspace=indent,eol,start " allow backspacing over everything in insert mode
     let mapleader = ","        " remap the leader key to ','
 
