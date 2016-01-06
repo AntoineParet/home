@@ -13,6 +13,7 @@ Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-scripts/nginx.vim'
+Plug 'osyo-manga/vim-over'
 call plug#end()
 
 "GENERAL
