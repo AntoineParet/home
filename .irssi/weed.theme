@@ -32,8 +32,8 @@
 # Make sure this is the latest version and use the tutorial
 # provided in https://github.com/ronilaukkarinen/weed
 #
-# Without actions in the tutorial the theme WILL NOT WORK 
-# PROPERLY! 
+# Without actions in the tutorial the theme WILL NOT WORK
+# PROPERLY!
 #
 # Always backup your ~/.irssi -folder before trying!
 #
@@ -89,20 +89,20 @@ abstracts = {
   # (if you liked the old fashioned hilight, comment out next lines below and enable the noted ones)
   #
 
-  pubmsgnick = "{msgnick %r$1%K%_|}%w";
-  pubnick = "$*";
-  pubmsgmenick = "%1%W{msgnick $1-|}";
-  menick = "$*%n";
-  # $0 = hilight color, $1 = mode, $2 = nick
-  pubmsghinick = "%1%W{msgnick $2-|}";
+  #pubmsgnick = "{msgnick %r$1%K%_|}%w";
+  #pubnick = "$*";
+  #pubmsgmenick = "%1%W{msgnick $1-|}";
+  #menick = "$*%n";
+  ## $0 = hilight color, $1 = mode, $2 = nick
+  #pubmsghinick = "%1%W{msgnick $2-|}";
 
   # Got rid of on version 3.05:
   #
-  #pubmsgnick = "{msgnick %r$1%K%_|}%w";
-  #pubnick = "$*";
-  #pubmsgmenick = "%G%K{msgnick $1-%R|}%0%W";
-  #menick = "$*%n";
-  #pubmsghinick = "%G%K{msgnick $2-%R|}%0%W";
+  pubmsgnick = "{msgnick %r$1%K%_|}%w";
+  pubnick = "$*";
+  pubmsgmenick = "%G%K{msgnick $1-%R|}%0%W";
+  menick = "$*%n";
+  pubmsghinick = "%G%K{msgnick $2-%R|}%0%W";
 
   msgchannel = ":$*";
   # $0 = nick, $1 = host
@@ -112,7 +112,7 @@ abstracts = {
   privmsg = "[$0($1-)]";
 
   #
-  # $0 = "msg", 
+  # $0 = "msg",
   # $1 = target nick
   #
 

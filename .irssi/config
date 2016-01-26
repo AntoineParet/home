@@ -299,14 +299,7 @@ settings = {
 };
 hilights = (
   { text = "Skia"; nick = "yes"; word = "yes"; },
-  { text = "skia_"; nick = "yes"; word = "yes"; },
-  {
-    text = "https?://[^ |\\\"']*";
-    color = "%R";
-    nick = "no";
-    word = "yes";
-    regexp = "yes";
-  }
+  { text = "skia_"; nick = "yes"; word = "yes"; }
 );
 keyboard = (
   { key = "meta-a"; id = "change_window"; data = "11"; },
