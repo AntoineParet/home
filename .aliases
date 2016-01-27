@@ -1,16 +1,16 @@
 
 # Aliases
-alias ll='ls --color=auto -alh'
-alias ls='ls --color=auto -h'
-alias grep='grep --color=auto'
-alias sudo='sudo -E'
-alias update='sudo aptitude update'
-alias upgrade='sudo aptitude upgrade'
-alias full-update='update && upgrade'
-alias i="sudo aptitude install"
-alias purge="sudo aptitude purge"
-alias s='aptitude search'
-alias less='less -r'
+alias ll="ls --color=auto -alh"
+alias ls="ls --color=auto -h"
+alias grep="grep --color=auto"
+alias sudo="sudo -E"
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
+alias full-update="update && upgrade"
+alias i="sudo apt-get install"
+alias purge="sudo apt-get purge"
+alias s="apt-cache search"
+alias less="less -r"
 alias unzip-all="7z x -y '*.zip'"
 alias zshrc="vim ~/.zshrc && source ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
@@ -24,7 +24,7 @@ alias SX="startx &; disown startx; exit"
 alias VPN="sudo service openvpn"
 
 # Misc
-alias commit='curl -s http://whatthecommit.com/index.txt'
+alias commit="curl -s http://whatthecommit.com/index.txt"
 alias compil="gcc -Wall -Werror -ansi -g"
 alias report="pandoc -V geometry:margin=1in -V fontsize:11pt"
 alias latexclean="rm *.aux; rm *.log; rm *.out; rm *.toc; rm *.snm; rm *.nav"
