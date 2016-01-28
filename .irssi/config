@@ -482,3 +482,4 @@ windows = {
   };
 };
 logs = { };
+ignores = ( { level = "JOINS QUITS"; } );
