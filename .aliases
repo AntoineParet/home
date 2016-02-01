@@ -34,16 +34,9 @@ alias MEMODUALSCREEN="echo 'xrandr --output VGA1 --auto --right-of LVDS1'"
 alias DUALSCREEN="xrandr --output VGA1 --auto --right-of LVDS1"
 alias starwars="telnet towel.blinkenlights.nl"
 
-# Shortcut aliases
-alias RADARE="cd /home/skia/Prog/radare2"
-alias GI02="cd /home/skia/Documents/UTBM/GI02"
-
 # SSH aliases
-alias Tatooine="ssh skia@skia.mooo.com"
-alias Dagobah="ssh skia@10.20.0.102"
-alias DagobahLAN="Dagobah"
 alias DagobahWAN="ssh skia@dagobah.libskia.so"
-alias Alderaan="ssh skia@10.20.0.101"
+alias AlderaanWAN="ssh skia@alderaan.libskia.so"
 alias Libskia.so="ssh skia@pike.tf -p 443 -D 1080"
 
 source ~/.aliases.local
