@@ -14,6 +14,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-scripts/nginx.vim'
 Plug 'osyo-manga/vim-over'
+Plug 'lepture/vim-jinja'
 call plug#end()
 
 "GENERAL
@@ -126,6 +127,7 @@ call plug#end()
 " Filetype hack
 	autocmd BufRead,BufNewFile *.pl		set filetype=prolog
 	autocmd BufRead,BufNewFile *.md		set filetype=markdown
+	autocmd BufRead,BufNewFile *.jinja		set filetype=jinja
 	autocmd Filetype pl set syntax=prolog
     au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
 
