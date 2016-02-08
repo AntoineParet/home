@@ -94,4 +94,10 @@ AddYear() {
     mv $1 "$2 - $1"
 }
 
+FlacToOpus() {
+    find -type f -name "*.flac" -print0 | while read -d $'\0' a; do
+        opusenc --bitrate 192 "$a" "${a[@]/%flac/opus}"
+    done
+}
+
 source ~/.aliases
