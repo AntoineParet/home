@@ -15,7 +15,13 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-scripts/nginx.vim'
 Plug 'osyo-manga/vim-over'
 Plug 'lepture/vim-jinja'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "GENERAL
     set nocompatible            " vim, and not vi
