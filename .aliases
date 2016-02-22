@@ -38,7 +38,7 @@ alias starwars="telnet towel.blinkenlights.nl"
 # SSH aliases
 alias DagobahWAN="ssh skia@dagobah.libskia.so"
 alias AlderaanWAN="ssh skia@alderaan.libskia.so"
-alias Libskia.so="ssh skia@pike.tf -p 443 -D 1080"
+alias Libskia.so="ssh skia@pike.tf -D 1080"
 
 source ~/.aliases.local
 
