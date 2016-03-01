@@ -22,6 +22,7 @@ alias reboot="sudo reboot"
 alias byebye="sudo lock && sudo pm-suspend"
 alias SX="startx &; disown startx; exit"
 alias VPN="sudo service openvpn"
+alias CleanKernel="dpkg -l 'linux-image-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge"
 
 # Misc
 alias commit="curl -s http://whatthecommit.com/index.txt"
