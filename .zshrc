@@ -100,4 +100,33 @@ FlacToOpus() {
     done
 }
 
+darkvador() {
+    A="440"
+    Ab="415.3"
+    F="349.2"
+    C="523.2"
+    E="659.3"
+    HF="698.5"
+
+    beep -f $A -l 600; sleep 0.1
+    beep -f $A -l 600; sleep 0.1
+    beep -f $A -l 600; sleep 0.1
+    beep -f $F -l 450; sleep 0.1
+    beep -f $C -l 150; sleep 0.1
+    beep -f $A -l 600; sleep 0.1
+    beep -f $F -l 450; sleep 0.1
+    beep -f $C -l 150; sleep 0.1
+    beep -f $A -l 1200; sleep 0.1
+
+    beep -f $E -l 600; sleep 0.1
+    beep -f $E -l 600; sleep 0.1
+    beep -f $E -l 600; sleep 0.1
+    beep -f $HF -l 450; sleep 0.1
+    beep -f $C -l 150; sleep 0.1
+    beep -f $Ab -l 600; sleep 0.1
+    beep -f $F -l 450; sleep 0.1
+    beep -f $C -l 150; sleep 0.1
+    beep -f $A -l 1200; sleep 0.1
+}
+
 source ~/.aliases
