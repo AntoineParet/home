@@ -129,4 +129,10 @@ darkvador() {
     beep -f $A -l 1200; sleep 0.1
 }
 
+lock () {
+    scrot /tmp/screenshot.png
+    convert /tmp/screenshot.png -blur 5x5 /tmp/lock.png
+    i3lock -i /tmp/lock.png
+}
+
 source ~/.aliases
