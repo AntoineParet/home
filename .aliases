@@ -21,7 +21,7 @@ alias reboot="sudo reboot"
 alias byebye="sudo lock && sudo pm-suspend"
 alias SX="startx &; disown startx; exit"
 alias VPN="sudo service openvpn"
-alias CleanKernel="dpkg -l 'linux-image-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge"
+alias CleanKernel="dpkg --list | grep linux-image | awk '{ print $2 }' | sort -V | sed -n '/'`uname -r`'/q;p' | xargs sudo apt-get -y purge"
 
 # Misc
 alias commit="curl -s http://whatthecommit.com/index.txt"
@@ -30,8 +30,7 @@ alias report="pandoc -V geometry:margin=1in -V fontsize:11pt"
 alias latexclean="rm *.aux; rm *.log; rm *.out; rm *.toc; rm *.snm; rm *.nav"
 alias poogle="ping google.com"
 alias moc="mocp -T transparent-background"
-alias MEMODUALSCREEN="echo 'xrandr --output VGA1 --auto --right-of LVDS1'"
-alias DUALSCREEN="xrandr --output VGA1 --auto --right-of LVDS1"
+alias DualScreen="xrandr --output VGA1 --auto --right-of LVDS1"
 alias starwars="telnet towel.blinkenlights.nl"
 
 # SSH aliases
