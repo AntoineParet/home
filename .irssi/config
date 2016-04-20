@@ -303,7 +303,7 @@ hilights = (
   { text = "skia_"; nick = "yes"; word = "yes"; }
 );
 keyboard = (
-  { key = "meta-a"; id = "change_window"; data = "11"; },
+  { key = "meta-a"; id = "change_window"; data = "21"; },
   { key = "meta-p"; id = "change_window"; data = "20"; },
   { key = "meta-m"; id = "change_window"; data = "30"; },
   { key = "meta-Z"; id = "change_window"; data = "31"; },
@@ -326,7 +326,7 @@ keyboard = (
   { key = "meta-O"; id = "change_window"; data = "39"; },
   { key = "meta-P"; id = "change_window"; data = "40"; },
   { key = "meta-Q"; id = "change_window"; data = "41"; },
-  { key = "meta-q"; id = "change_window"; data = "21"; },
+  { key = "meta-q"; id = "change_window"; data = "11"; },
   { key = "meta-S"; id = "change_window"; data = "42"; },
   { key = "meta-D"; id = "change_window"; data = "43"; },
   { key = "meta-F"; id = "change_window"; data = "44"; },
@@ -347,8 +347,17 @@ keyboard = (
   { key = "meta-รง"; id = "change_window"; data = "9"; },
   { key = "meta-ร "; id = "change_window"; data = "10"; },
   { key = "meta-x"; id = "command"; data = "window last"; },
-  { key = "meta-N"; id = "command"; data = "/mark"; }
+  { key = "meta-N"; id = "command"; data = "/mark"; },
+  { key = "meta-w"; id = "change_window"; data = "12"; },
+  { key = "meta-้"; id = "change_window"; data = "2"; },
+  { key = "meta-ง"; id = "change_window"; data = "6"; },
+  { key = "meta-่"; id = "change_window"; data = "7"; },
+  { key = "meta-!"; id = "change_window"; data = "8"; },
+  { key = "meta-็"; id = "change_window"; data = "9"; },
+  { key = "meta-เ"; id = "change_window"; data = "10"; }
 );
+logs = { };
+ignores = ( { level = "JOINS QUITS"; } );
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
   2 = {
@@ -454,10 +463,10 @@ windows = {
   12 = {
     items = (
       {
-        type = "QUERY";
+        type = "CHANNEL";
         chat_type = "IRC";
-        name = "Magne";
-        tag = "RIVLINK";
+        name = "#unixcorn";
+        tag = "FREENODE";
       }
     );
   };
@@ -466,7 +475,7 @@ windows = {
       {
         type = "QUERY";
         chat_type = "IRC";
-        name = "Pike";
+        name = "Magne";
         tag = "RIVLINK";
       }
     );
@@ -476,11 +485,70 @@ windows = {
       {
         type = "QUERY";
         chat_type = "IRC";
+        name = "Pike";
+        tag = "RIVLINK";
+      }
+    );
+  };
+  15 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
         name = "Dustri";
         tag = "REZOSUP";
       }
     );
   };
+  16 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#guy";
+        tag = "REZOSUP";
+      }
+    );
+  };
+  17 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "Fr33Tux";
+        tag = "RIVLINK";
+      }
+    );
+  };
+  18 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "Magne";
+        tag = "REZOSUP";
+      }
+    );
+  };
+  19 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "m_b";
+        tag = "FREENODE";
+      }
+    );
+  };
+  20 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "NickServ";
+        tag = "REZOSUP";
+      }
+    );
+  };
 };
-logs = { };
-ignores = ( { level = "JOINS QUITS"; } );
+mainwindows = { 1 = { first_line = "0"; lines = "38"; }; };
