@@ -1,5 +1,6 @@
 -- Standard awesome library
 local gears = require("gears")
+require("gears.color")
 local awful = require("awful")
 awful.rules = require("awful.rules")
 require("awful.autofocus")
@@ -11,6 +12,11 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local vicious = require("vicious")
+
+-- Custom plugins
+require("volume")
+require("my_widgets")
+require("mocp")
 
 -- Load Debian menu entries
 require("debian.menu")
@@ -190,31 +196,12 @@ for s = 1, screen.count() do
     left_layout:add(mypromptbox[s])
 
     -- Widgets that are aligned to the right
-    local cpuwidget = wibox.widget.textbox()
-    -- cpuwidget:set_background_color("#494B4F")
-    -- cpuwidget:set_color({ type = "linear", from = { 0, 0 }, to = { 50, 0 }},
-    --     stops = { { 0, "#FF5656" }, { 0.5, "#88A175" }, { 1, "#AECF96" }})
-    vicious.cache(vicious.widgets.cpu)
-    vicious.register(cpuwidget, vicious.widgets.cpu, "CPU: $1% ")
-    -- Battery state
-    local batwidget = awful.widget.progressbar()
-    batwidget:set_width(8)
-    batwidget:set_height(10)
-    batwidget:set_vertical(true)
-    batwidget:set_background_color("#494B4F")
-    batwidget:set_border_color(nil)
-    -- batwidget:set_color({ type = "linear", from = { 0, 0 }, to = { 0, 10 }},
-    --jstops = { {0, "#AECF96" }, { 0.5, "#88A175" }, { 1, "#FF5656" }})
-    vicious.register(batwidget, vicious.widgets.bat, "$2", 61, "BAT0")
-    -- Mem usage
-    local  memwidget = wibox.widget.textbox()
-    vicious.cache(vicious.widgets.mem)
-    vicious.register(memwidget, vicious.widgets.mem, "MEM: $1% ($2/$3MB)", 13)
-
     local right_layout = wibox.layout.fixed.horizontal()
     right_layout:add(cpuwidget)
     right_layout:add(memwidget)
     right_layout:add(batwidget)
+    right_layout:add(volume_widget)
+    right_layout:add(mocp_widget)
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
@@ -295,9 +282,9 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "Print", function () awful.util.spawn("xfce4-screenshooter") end),
 
     -- Multimedia Keys
-    awful.key({ }, "XF86AudioRaiseVolume", function () volume("up", tb_volume) end),
-    awful.key({ }, "XF86AudioLowerVolume", function () volume("down", tb_volume) end),
-    awful.key({ }, "XF86AudioMute", function () volume("mute", tb_volume) end),
+    awful.key({ }, "XF86AudioRaiseVolume", function () set_volume ("up") end),
+    awful.key({ }, "XF86AudioLowerVolume", function () set_volume ("down") end),
+    awful.key({ }, "XF86AudioMute", function () set_volume ("mute") end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
@@ -487,4 +474,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Autostart
-os.execute("(sleep 3s && parcellite) &")
+os.execute("(sleep 3s; parcellite; nm-applet) &")
