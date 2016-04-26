@@ -29,6 +29,6 @@ batwidget:set_height(10)
 batwidget:set_vertical(true)
 batwidget:set_background_color("#494B4F")
 batwidget:set_border_color(nil)
-batwidget:set_color({ type = "linear", from = { 0, 0 }, to = { 0, 10 }, stops = { {0, "#AECF96" }, { 0.5, "#88A175" }, { 1, "#FF5656" }} })
+batwidget:set_color({ type = "linear", from = { 0, 0 }, to = { 0, 10 }, stops = { {0.2, "#99FF99" }, { 0.9, "#FF2256" }} })
 vicious.register(batwidget, vicious.widgets.bat, "$2", 61, "BAT0")
 -- }}

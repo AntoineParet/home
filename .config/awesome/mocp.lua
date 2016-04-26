@@ -22,7 +22,7 @@ function update_mocp(widget)
                 text = "<span color='orange'>"
             end
             local artist = string.match(infos, "Artist: (%C*)")
-            local title = string.match(infos, "Title: (%C*)")
+            local title = string.match(infos, "SongTitle: (%C*)")
             local totalTime = string.match(infos, "TotalTime: (%C*)")
             local currentTime = string.match(infos, "CurrentTime: (%C*)")
             text = text .. title .. " - " .. artist .. " (" .. currentTime .. "/" .. totalTime .. ")</span>"
