@@ -28,7 +28,7 @@ function update_mocp(widget)
             text = text .. title .. " - " .. artist .. " (" .. currentTime .. "/" .. totalTime .. ")</span>"
         end
     else
-        text = "<span color='red'>Not running</span>"
+        text = "<span color='red'>No music</span>"
     end
     widget:set_markup(text)
 end

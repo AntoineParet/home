@@ -1,5 +1,6 @@
 local awful = require("awful")
 local vicious = require("vicious")
+local wibox = require("wibox")
 
 -- {{ My Vicious widgets
 -- CPU
@@ -32,3 +33,32 @@ batwidget:set_border_color(nil)
 batwidget:set_color({ type = "linear", from = { 0, 0 }, to = { 0, 10 }, stops = { {0.2, "#99FF99" }, { 0.9, "#FF2256" }} })
 vicious.register(batwidget, vicious.widgets.bat, "$2", 61, "BAT0")
 -- }}
+--
+battery_widget = wibox.widget.textbox()
+battery_widget:set_align("right")
+
+function update_battery(widget)
+    local fd = io.popen("acpi")
+    local status = fd:read("*all")
+    fd:close()
+
+    local battery = ""
+    local percent = tonumber(string.match(status, "(%d?%d?%d)%%"))
+    local time = string.match(status, "(%d%d:%d%d):")
+    local color = "green"
+    if percent < 26 then
+        color = "orange"
+    end
+    if percent < 16 then
+        color = "red"
+    end
+
+    battery = battery .. "<span color='" .. color .. "'>" .. percent .. "% " .. time .. "</span>"
+    widget:set_markup(battery)
+end
+
+update_battery(battery_widget)
+
+mytimer = timer({ timeout = 60 })
+mytimer:connect_signal("timeout", function () update_battery(battery_widget) end)
+mytimer:start()
