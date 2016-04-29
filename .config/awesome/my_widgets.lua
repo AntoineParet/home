@@ -45,6 +45,9 @@ function update_battery(widget)
     local battery = ""
     local percent = tonumber(string.match(status, "(%d?%d?%d)%%"))
     local time = string.match(status, "(%d%d:%d%d):")
+    if time == nil then
+        time = ""
+    end
     local color = "green"
     if percent < 26 then
         color = "orange"
