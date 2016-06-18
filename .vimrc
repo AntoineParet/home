@@ -15,7 +15,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-scripts/nginx.vim'
 Plug 'osyo-manga/vim-over'
 Plug 'lepture/vim-jinja'
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips' "Both snippet plugins are needed for them to work
 Plug 'honza/vim-snippets'
 call plug#end()
 
