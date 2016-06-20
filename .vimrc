@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'wombat256.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-"Plug 'Shougo/neocomplete.vim'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
