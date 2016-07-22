@@ -100,6 +100,12 @@ FlacToOpus() {
     done
 }
 
+MergetoMKV() {
+    mkvmerge -o "tmp_$1" $1.*
+    rm $1.*
+    mv "tmp_$1" "$1.mkv"
+}
+
 darkvador() {
     A="440"
     Ab="415.3"
