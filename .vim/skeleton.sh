@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# Skia < lordbanana25 AT mailoo DOT org >
+# Skia < skia AT libskia DOT so >
 #
-# Beerware licensed software - 2015
+# Beerware licensed software - 2016
 #
 
 
