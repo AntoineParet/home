@@ -3,6 +3,7 @@ servers = (
     address = "irc.freenode.net";
     chatnet = "FREENODE";
     port = "6667";
+    password = "Skia:plop4000";
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
@@ -17,7 +18,7 @@ servers = (
     autoconnect = "yes";
   },
   {
-    address = "irc.int.rezosup.org";
+    address = "irc.u-psud.fr";
     chatnet = "REZOSUP";
     port = "6667";
     use_ssl = "no";
@@ -38,6 +39,7 @@ chatnets = {
 
 channels = (
   { name = "##SaB"; chatnet = "FREENODE"; autojoin = "yes"; },
+  { name = "#unixcorn"; chatnet = "FREENODE"; autojoin = "yes"; },
   { name = "#radare"; chatnet = "FREENODE"; autojoin = "yes"; },
   { name = "#radare-rsoc"; chatnet = "FREENODE"; autojoin = "yes"; },
   { name = "#moule"; chatnet = "REZOSUP"; autojoin = "yes"; },

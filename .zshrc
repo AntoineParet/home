@@ -94,6 +94,12 @@ AddYear() {
     mv $1 "$2 - $1"
 }
 
+Mp3ToOgg() {
+    find -type f -name "*.mp3" -print0 | while read -d $'\0' a; do
+        ffmpeg -i "$a" -vsync 2 "${a[@]/%mp3/ogg}"
+    done
+}
+
 FlacToOpus() {
     find -type f -name "*.flac" -print0 | while read -d $'\0' a; do
         opusenc --bitrate 192 "$a" "${a[@]/%flac/opus}"
