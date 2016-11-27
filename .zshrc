@@ -66,3 +66,5 @@ srv(){
 compdef _service srv
 
 export SDL_NOMOUSE=1
+
+source ~/.aliases
