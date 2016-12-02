@@ -2,3 +2,4 @@ sudo apt install  htop
 sudo apt install  moc
 sudo apt install  vim
 sudo apt install  kile
+sudo apt install  sl
