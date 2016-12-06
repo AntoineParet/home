@@ -2,3 +2,18 @@
 #alias s="sudo"
 alias rsynchome="sudo rsync -rltgoDv --del --ignore-errors /home/skip/ /media/skip/A.PARET-disque_dur/home"
 alias cours="~/Documents/Cours"
+alias ll='ls --color=auto -alhF'
+alias ls='ls --color=auto -h'
+alias grep='grep --color=auto'
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
+alias full-update='update && upgrade'
+alias s='apt search'
+alias i="sudo apt install"
+alias less='less -r'
+alias zshrc="vim ~/.zshrc && source ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+alias poogle="ping google.com"
+alias moc="mocp -T transparent-background"
+alias rasp="ssh skip@Argenta"
+alias raspco=" ssh-add && rasp"
