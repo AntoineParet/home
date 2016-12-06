@@ -39,7 +39,7 @@ bindkey "^[[6~" down-line-or-history
 
 # Aliases
 alias starwars="telnet towel.blinkenlights.nl"
-alias ll='ls --color=auto -alh'
+alias ll='ls --color=auto -alhF'
 alias ls='ls --color=auto -h'
 alias grep='grep --color=auto'
 alias update='sudo apt update'

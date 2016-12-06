@@ -1,2 +1,4 @@
 #!bin/bash
-alias s="sudo"
+#alias s="sudo"
+alias rsynchome="sudo rsync -rltgoDv --del --ignore-errors /home/skip/ /media/skip/A.PARET-disque_dur/home"
+alias cours="~/Documents/Cours"
