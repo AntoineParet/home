@@ -4,3 +4,5 @@ sudo apt install  vim
 sudo apt install  kile
 sudo apt install  sl
 sudo apt install  lock
+sudo apt install  klavaro
+sudo apt install  pandoc
