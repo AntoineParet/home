@@ -1,2 +1,5 @@
-sudo modprobe -r ideapad_laptop   
-
+byobu
+clavier
+modprobe
+irssi
+pull 1 doc

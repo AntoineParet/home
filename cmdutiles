@@ -7,3 +7,5 @@ sudo apt install  lock
 sudo apt install  klavaro
 sudo apt install  pandoc
 sudo apt install  wxmaxima
+sudo apt install  irssi
+sudo apt install  byobu
