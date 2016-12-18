@@ -9,3 +9,5 @@ sudo apt install  pandoc
 sudo apt install  wxmaxima
 sudo apt install  irssi
 sudo apt install  byobu
+sudo apt install  nmap
+sudo apt install  nmap
