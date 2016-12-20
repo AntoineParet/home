@@ -11,11 +11,17 @@
 #sudo apt install  wxmaxima
 #sudo apt install  irssi
 #sudo apt install  byobu
+
+
 read -p 'Voulez vous telecharger vim ? (yes/no)' validation
-if [  = yes  ] then
+if [  = yes  ] then 
 sudo apt install vim
 fi
-read -p 'Voulez vous telecharger htop ? (yes/no)' validation
-if [  = yes  ] then
-sudo apt install htop
+read -p 'Voulez vous telecharger vim ? (yes/no)' validation
+if [  = yes  ] then 
+sudo apt install vim
+fi
+read -p 'Voulez vous telecharger vim ? (yes/no)' validation
+if [  = yes  ] then 
+sudo apt install vim
 fi
