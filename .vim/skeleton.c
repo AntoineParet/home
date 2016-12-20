@@ -1,5 +1,5 @@
 /*
- * Skia < skia AT libskia DOT so >
+ * Skip
  *
  * Beerware licensed software - 2016
  */
