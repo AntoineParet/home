@@ -1,7 +1,8 @@
 #!bin/bash
 #alias s="sudo"
-alias rsynchome="sudo rsync -rltgoDv --del --ignore-errors /home/skip/ /media/skip/A.PARET-disque_dur/skip --exclude='firefox' --exclude='.steam' --exclude='Bureau'"
-alias cours="~/Documents/Cours"
+alias rsynchome="sudo rsync -rltgoDv --del --ignore-errors /home/skip/ /media/skip/A.PARET-disque_dur/skip --exclude='firefox' --exclude='.steam' --exclude='Bureau' --exclude=Musique"
+alias rsyncmusic="sudo rsync -rltgoDv --ignore-errors /home/skip/Musique /media/skip/A.PARET-disque_dur"
+
 alias ll='ls --color=auto -alhF'
 alias ls='ls --color=auto -h'
 alias grep='grep --color=auto'

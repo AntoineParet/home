@@ -1,27 +1,27 @@
 #!/bin/bash
 
-#sudo apt install  htop
-#sudo apt install  moc
-#sudo apt install  vim
-#sudo apt install  kile
-#sudo apt install  sl
-#sudo apt install  lock
-#sudo apt install  klavaro
-#sudo apt install  pandoc
-#sudo apt install  wxmaxima
-#sudo apt install  irssi
-#sudo apt install  byobu
+htop
+moc
+vim
+kile
+sl
+lock
+klavaro
+pandoc
+wxmaxima
+irssi
+byobu
 
 
-read -p 'Voulez vous telecharger vim ? (yes/no)' validation
-if [  = yes  ] then 
-sudo apt install vim
-fi
-read -p 'Voulez vous telecharger vim ? (yes/no)' validation
-if [  = yes  ] then 
-sudo apt install vim
-fi
-read -p 'Voulez vous telecharger vim ? (yes/no)' validation
-if [  = yes  ] then 
-sudo apt install vim
-fi
+#read -p 'Voulez vous telecharger vim ? (yes/no)' validation
+#if [  = yes  ] then
+#sudo apt install vim
+#fi
+#read -p 'Voulez vous telecharger vim ? (yes/no)' validation
+#if [  = yes  ] then
+#sudo apt install vim
+#fi
+#read -p 'Voulez vous telecharger vim ? (yes/no)' validation
+#if [  = yes  ] then
+#sudo apt install vim
+#fi
