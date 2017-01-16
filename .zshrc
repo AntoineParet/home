@@ -146,5 +146,7 @@ lock () {
     convert /tmp/screenshot.png -blur 5x5 /tmp/lock.png
     i3lock -i /tmp/lock.png
 }
+eval "$(thefuck --alias)"
+eval "$(thefuck --alias f)"
 
 source ~/.aliases
