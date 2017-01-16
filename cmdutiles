@@ -11,17 +11,4 @@ pandoc
 wxmaxima
 irssi
 byobu
-
-
-#read -p 'Voulez vous telecharger vim ? (yes/no)' validation
-#if [  = yes  ] then
-#sudo apt install vim
-#fi
-#read -p 'Voulez vous telecharger vim ? (yes/no)' validation
-#if [  = yes  ] then
-#sudo apt install vim
-#fi
-#read -p 'Voulez vous telecharger vim ? (yes/no)' validation
-#if [  = yes  ] then
-#sudo apt install vim
-#fi
+geogebra

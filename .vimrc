@@ -17,6 +17,7 @@ Plug 'lepture/vim-jinja'
 Plug 'SirVer/ultisnips' "Both snippet plugins are needed for them to work
 Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex'
+Plug 'dpelle/vim-Grammalecte'
 call plug#end()
 
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -291,3 +292,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "Load language specific config file
 "autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vimrc.python
+let g:grammalecte_cli_py='/home/skip/Grammalecte-fr-v0.5.14.oxt_FILES/pythonpath/cli.py'
