@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Skip - 2016
+#
+
+choix='o'
+
+while [ $choix != 's' ] && [ $choix != 'm' ]
+do
+    read -p "Supprimer $1.sav car $1 fonctionne correctement (s) ou revenir a la situation initiale (m) ?" -n 1 choix
+    echo -e
+    if [ $choix = 's' ]
+    then
+        rm $1.sav
+        echo "$1.sav supprimé avec succès !"
+    elif [ $choix = 'm' ]
+    then
+        rm $1
+        mv $1.sav $1
+        echo "Tout est redevenu comme au debut ! ($1.sav est venu s'écrire a la place de $1)"
+    fi
+done
