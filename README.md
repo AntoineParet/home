@@ -24,3 +24,11 @@ the .sav version is clean.
     rmsav text.txt
 
 This function ask you if you want to **delete** the .sav version because the other one is ok or if you want to **came back to your initial situation**.
+
+opn
+===
+
+The `opn` function choose for you the best logiciel to open your file by using the extension of the file.
+For exemple, a PDF file will automatically be open with evince.
+
+    opn my_file.mp3
