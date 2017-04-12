@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*
+#
+# Skip <antoine.paret@orange.fr>
+#
+import re
+import os
+import argparse
+import sys
+
+args=sys.argv[1:]
+logiciels={'html':'firefox',\
+        'pdf':'evince',\
+        'png':'ristretto',\
+        'txt':'vim',\
+        'ova':'virtualbox',\
+        'vdi':'virtualbox',\
+        'jpg':'ristretto',\
+        'pptx':'libreoffice'\
+        ,'xlsx':'libreoffice'\
+        ,'docx':'libreoffice'\
+        ,'xcf':'gimp',\
+        'mp3':'mocp -T transparent-background',\
+        'aup':'audacity',\
+        'tex':'vim',\
+        'md':'vim',\
+        'py':'vim'}
+for file in args:
+    ext=file
+    i=0
+    for char in file:
+        if char==".":
+            point=i
+        i+=1
+    ext=ext[point:]
+    ext=ext[1:]
+    if (ext in logiciels.keys()) == True:
+        log = logiciels[ext]
+        print("{0} {1}".format(log,file))
+        os.system(log + " " + file+ " &")
+    else:
+        print("Unknowned extension")
