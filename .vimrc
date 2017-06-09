@@ -28,7 +28,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
     set nocompatible            " vim, and not vi
     set history=128             " keep 128 lines of history
     set showcmd                 " show incomplete commands
-    colorscheme wombat256mod	" colorsheme : wombat256
+    colorscheme wombat256mod      	" colorsheme : wombat256
     set background=dark
     set nomodeline              " modeline are for pussies
     set textwidth=120           " max number of characters on a single line
@@ -292,4 +292,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "Load language specific config file
 "autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vimrc.python
-let g:grammalecte_cli_py='/home/skip/Grammalecte-fr-v0.5.14.oxt_FILES/pythonpath/cli.py'
+"let g:grammalecte_cli_py='/home/skip/Grammalecte-fr-v0.5.14.oxt_FILES/pythonpath/cli.py'
