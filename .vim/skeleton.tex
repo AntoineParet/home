@@ -11,77 +11,47 @@
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
 \usepackage{graphicx}\graphicspath{{pictures/}}
-\usepackage{float}
-\usepackage[T1]{fontenc}
-\usepackage{color}
-\usepackage{fancyhdr}
-%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
-\usepackage[Bjornstrup]{fncychap}
-\usepackage[procnames]{listings}
-\usepackage[colorlinks=true,linkcolor=black]{hyperref}
-\usepackage{pdfpages}
-\usepackage{titlesec, blindtext, color}
-
-%pdf metadata
-\hypersetup{
-    unicode=true,
-    colorlinks=true,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black,
-    pdfauthor={skip <antoine.paret@orange.fr>},
-    pdftitle={},
-    pdfcreator={pdftex},
-    pdfsubject={},
-    pdfkeywords={},
-}
-
-
-\definecolor{keywords}{RGB}{200,0,90}
-\definecolor{comments}{RGB}{0,0,113}
-\definecolor{red}{RGB}{160,0,0}
-\definecolor{green}{RGB}{0,150,0}
-
-%\lstset{ % For Python
-%    language=Python,
-%    basicstyle=\ttfamily\small,
-%    numbers=left,
-%    numberstyle=\color{red},
-%    keywordstyle=\color{keywords},
-%    commentstyle=\color{comments},
-%    stringstyle=\color{green},
-%    showstringspaces=false,
-%}
-
-%inner meta
-\title{A Title}
-\author{Antoine PARET}
-\date{\today}
-
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}%marges
+\usepackage{mathptmx}%police
 
 \begin{document}
 
+\title{A Title}
+\author{Antoine PARET
+        \textit{antoine.paret@orange.fr}}
+\date{\today}
+
 \maketitle
 
-\tableofcontents
-\listoffigures
+\part{partie}
+\chapter{chapitre}
 
-% \begin{lstlisting}
-% Code
-% \end{lstlisting}
+    \section{Introduction}
+Cette section\foonote{une explication située en bas de page} contient...
 
+    \section{Structure}
+Cette section contient :
 
-% Annexes
+\begin{itemize}%enumerate pour une liste enumérée ou description pour une liste de description
 
-\appendix
-\addtolength{\textheight}{60mm}
-\part*{Annexes}
-\addtolength{\topmargin}{-50mm}
-\definecolor{gray75}{gray}{0.75}
-\newcommand{\hsp}{\hspace{20pt}}
-\titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}[\vskip -2em]
+    \item Un canard.
 
-% \chapter{Annexe 1}
+    \item Une puce par defaut
+
+    \item[*]Une autre puce
+
+\end{itemize}
+
+        \subsection{Entrée en matière}
+Cette sous-section contient...
+
+        \subsubsection{Information de l'article}
+Cette sous-sous-section contient...
+
+        \subsection{sous-section}
+            \subsubsection{sous-sous-section}
+
+\paragraph{paragraphe}
+    \subparagraph{sous-paragraphe}
 
 \end{document}

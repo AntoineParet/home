@@ -1,0 +1,15 @@
+:GrammalecteCheck	Grammalecte.txt	/*:GrammalecteCheck*
+:GrammalecteClear	Grammalecte.txt	/*:GrammalecteClear*
+Grammalecte	Grammalecte.txt	/*Grammalecte*
+Grammalecte.txt	Grammalecte.txt	/*Grammalecte.txt*
+g:grammalecte_cli_py	Grammalecte.txt	/*g:grammalecte_cli_py*
+g:grammalecte_disable_rules	Grammalecte.txt	/*g:grammalecte_disable_rules*
+g:grammalecte_win_height	Grammalecte.txt	/*g:grammalecte_win_height*
+grammalecte-bugs	Grammalecte.txt	/*grammalecte-bugs*
+grammalecte-configuration	Grammalecte.txt	/*grammalecte-configuration*
+grammalecte-download	Grammalecte.txt	/*grammalecte-download*
+grammalecte-features	Grammalecte.txt	/*grammalecte-features*
+grammalecte-installation	Grammalecte.txt	/*grammalecte-installation*
+grammalecte-license	Grammalecte.txt	/*grammalecte-license*
+grammalecte-overview	Grammalecte.txt	/*grammalecte-overview*
+grammalecte-screenshot	Grammalecte.txt	/*grammalecte-screenshot*

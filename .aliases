@@ -1,7 +1,13 @@
 #!bin/bash
 #alias s="sudo"
-alias rsynchome="sudo rsync -rltgoDv --del --ignore-errors /home/skip/ /media/skip/A.PARET-disque_dur/skip --exclude='firefox' --exclude='.steam' --exclude='Bureau' --exclude=Musique"
+alias rsynchome="sudo rsync -rltgoDv --del --ignore-errors /home/skip/ /media/skip/A.PARET-disque_dur/skip
+--exclude='firefox' --exclude='.steam' --exclude='Bureau' --exclude=Musique --exclude=Images --exclude=Documents
+--exclude=Vidéos --exclude=snap --exclude=.PlayOnLinux --exclude=.cache --exclude=thunderbird"
 alias rsyncmusic="sudo rsync -rltgoDv --ignore-errors /home/skip/Musique /media/skip/A.PARET-disque_dur"
+alias rsyncimage="sudo rsync -rltgoDv --ignore-errors /home/skip/Images /media/skip/A.PARET-disque_dur"
+alias rsyncdoc="sudo rsync -rltgoDv --ignore-errors /home/skip/Documents /media/skip/A.PARET-disque_dur"
+alias rsyncvideos="sudo rsync -rltgoDv --ignore-errors /home/skip/Vidéos /media/skip/A.PARET-disque_dur"
+alias rsyncall="rsyncmusic && rsyncimage && rsyncdoc && rsyncvideos"
 
 alias ll='ls --color=auto -alhF'
 alias ls='ls --color=auto -h'
@@ -19,3 +25,4 @@ alias moc="mocp -T transparent-background"
 alias rasp="ssh skip@Argenta"
 alias raspco=" ssh-add && rasp"
 alias dodo="sudo shutdown now -h"
+alias vpn="expressvpn connect smart && firefox &"
